@@ -42,11 +42,9 @@ public class ExerciseApp{
         }
         ArrayList<PersonBean> allPeople = controller.getAllPersons();
         System.out.println(allPeople);
-// add something
+
     }
 
-
-    // This is a test comment
 
 
 }
