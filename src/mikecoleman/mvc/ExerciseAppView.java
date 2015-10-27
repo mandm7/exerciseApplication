@@ -1,5 +1,7 @@
 package mikecoleman.mvc;
 
+import java.util.ArrayList;
+
 /**
  * Created by Mike on 10/15/2015.
  * This class will serve the purpose of a View in the MVC pattern.
@@ -15,8 +17,8 @@ public class ExerciseAppView {
     }
 
     // Method to display all MyPersonBeans found in the ArrayList
-    public void displayInformation() {
-        System.out.println(appController.getAllPersons());
+    public void displayInformation(ArrayList<MyPersonBean> people) {
+        System.out.println(people);
     }
 
 }

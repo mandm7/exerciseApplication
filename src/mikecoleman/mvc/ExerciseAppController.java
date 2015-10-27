@@ -20,7 +20,7 @@ public class ExerciseAppController {
     // Directly referenced from the ExerciseAppRunner main method to start program here
     public void start() {
         makePerson();
-        appView.displayInformation();
+        appView.displayInformation(appModel.getAllPersons());
     }
 
     // Method to create new users for the ExerciseApp
@@ -51,11 +51,6 @@ public class ExerciseAppController {
     public void storePerson(String name, String email, int age, int height, int weight) {
         MyPersonBean newPerson = new MyPersonBean(name, email, age, height, weight);
         appModel.addPerson(newPerson);
-    }
-
-    // ArrayList of all created MyPersonBeans
-    public ArrayList<MyPersonBean> getAllPersons() {
-        return appModel.persons;
     }
 
 }

@@ -24,7 +24,7 @@ class Processor implements Runnable {
     public void run() {
         System.out.println("Starting " + id);
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

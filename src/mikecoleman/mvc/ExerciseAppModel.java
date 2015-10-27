@@ -10,12 +10,14 @@ import java.util.ArrayList;
 
 public class ExerciseAppModel {
     // Create arrayList called persons to hold all MyPersonBeans created
-    ArrayList<MyPersonBean> persons = new ArrayList<>();
+    private ArrayList<MyPersonBean> persons = new ArrayList<>();
 
     // Method to add a new MyPersonBean to the above arrayList
     public void addPerson(MyPersonBean aPerson) {
         this.persons.add(aPerson);
     }
 
-
+    public ArrayList<MyPersonBean> getAllPersons(){
+        return persons;
+    }
 }
