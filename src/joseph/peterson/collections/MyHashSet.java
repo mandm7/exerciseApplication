@@ -1,4 +1,4 @@
-package joseph.peterson.collections;
+package joseph.peterson.COLLECTIONS;
 
 import java.util.HashSet;
 
@@ -13,21 +13,46 @@ public class MyHashSet {
 
     }
     public void program() {
-        /*Happy paths*/
+        ///////////////////////////////////////////HAPPY PATHS////////////////////////////////////////////////////////
         HashSet<String> cards = new HashSet<>();
         cards.add("King of spades");
         cards.add("King of hearts");
         cards.add("King of diamonds ");
         cards.add("King of clubs");
         System.out.println(cards);
-
-        /*Here are some nasty paths.*/
+        System.out.println(cards.size());
+        if (cards.contains("King of spades")){
+            System.out.println(cards);
+        }
+//happy path remove
+        cards.remove("King of hearts");
+        if (cards.contains("King of spades")){
+            System.out.println("it does contain the king of spades.");
+        }
+        System.out.println("now we have " + cards);
+        ///////////////////////////////////Here are some nasty paths.////////////////////////////////////////////////
         /* Throws IllegalArgumentException when trying to set initial capacity below zero */
         try {
             HashSet<String> aSet = new HashSet<>(-2);
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("You cannot start a collection with a negative value");
         }
-        //I just wat to see what happens.
+        //adding a value that already exists
+        cards.add("King of clubs");
+        System.out.println(cards);
+        //adding null
+        cards.add(null);
+        System.out.println(cards);
+        //removing null
+        cards.remove(null);
+        System.out.println(cards);
+        //look for some value that doesnt exist.
+        if (cards.contains("jibber")){
+            System.out.println("it contains jibber");
+        }else {
+            System.out.println("jibber dont exist yo.");
+        }
+
     }
 }

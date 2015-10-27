@@ -127,8 +127,8 @@ public class JSONParser {
          * @param in
      * @param containerFactory - Use this factory to create your own JSON object and JSON array containers.
          * @return Instance of the following:
-         *  org.json.simple.JSONObject,
-         *      org.json.simple.JSONArray,
+         *  org.JSON.simple.JSONObject,
+         *      org.JSON.simple.JSONArray,
          *      java.lang.String,
          *      java.lang.Number,
          *      java.lang.Boolean,
