@@ -1,5 +1,7 @@
 package mikecoleman.collections;
 
+import javafx.beans.binding.BooleanBinding;
+
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
@@ -44,7 +46,6 @@ public class RestingHrHashMap {
         // Prints out how many mappings there are in the HashMap
         System.out.println(map.size());
 
-
         // This would clear the HashMap of all keys and values
         // map.clear();
 
@@ -54,6 +55,8 @@ public class RestingHrHashMap {
         } else {
             System.out.println("The HashMap is not empty");
         }
+
+
         /*
         Creates a second HashMap and copies the mappings from the original map into itself
         Note that you can take this from a LinkedHashMap and put it into a normal HashMap
@@ -66,11 +69,28 @@ public class RestingHrHashMap {
         System.out.println(map.entrySet().equals(map2));
 
 
+
         // *****************The following are some NASTY paths*********************
 
-        // Inserting a negative load factor
-        LinkedHashMap<String, Integer> anotherMap = new LinkedHashMap(16, (float) -.75);
+        // Inserting a negative load factor, throws IllegalArgumentException
+        try {
+            LinkedHashMap<String, Integer> anotherMap = new LinkedHashMap(16, (float) -.75);
+        } catch (Exception e) {
+            System.out.println("Cannot have a negative load factor");
+        }
 
+        // This attempts to remove a key that does not exist
+        map.remove("nobody");
 
+        // Attempt to remove a null
+        map.remove(null);
+
+        // Attempt to get a null value
+        map.get(null);
+
+        // Attempt to add a new mapping with a valid key but a null value
+        map.put("happy", null);
+
+        System.out.println(map.keySet());
     }
 }

@@ -33,13 +33,11 @@ public class StepsTreeMap {
         System.out.println(challenge.lastEntry());
 
         // Check if a value is in the map--in this case if a person is in the challenge
-        if(challenge.containsValue("Denise")){
+        if (challenge.containsValue("Denise")) {
             System.out.println("Denise is entered in the challenge");
-        }
-        else {
+        } else {
             System.out.println("Denise is not participating in this challenge");
         }
-
 
 
         // *****************The following are some NASTY paths*********************
@@ -49,11 +47,23 @@ public class StepsTreeMap {
 
         try {
             aTree.firstKey();
-        } catch(Exception e){
-            System.out.println("There is no key ound in the TreeMap");
+        } catch (Exception e) {
+            System.out.println("There is no key found in the TreeMap");
         }
+        // try to add null as key and value
 
+        // This tries to add a null value as a key which throws a null pointer exception
+        challenge.put(null, "Megan");
 
+        // This tries to add a null as a value, Collections.reverse() doesn't like null value comparator here
+        challenge.put(3500, null);
+
+        //
+        try {
+            challenge.get(null);
+        } catch (Exception e) {
+            System.out.println("cannot get a null value");
         }
     }
+}
 
