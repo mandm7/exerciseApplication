@@ -1,12 +1,19 @@
-package joseph.peterson.json;
+package joseph.peterson.JSON;
 
 
-import org.quickconnectfamily.json.JSONInputStream;
+import joseph.peterson.MVC.ExerciseAppController;
+import joseph.peterson.MVC.PersonBean;
+import org.quickconnectfamily.json.JSONException;
+import org.quickconnectfamily.json.JSONUtilities;
+import joseph.peterson.MVC.ExerciseAppController;
+import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Created by Joseph on 10/20/2015.
  */
-public class MyJson {
+public class MyJson implements Serializable{
+    private ExerciseAppController controller = new ExerciseAppController();
 
     public static void main(String[] args) {
 
@@ -14,11 +21,12 @@ public class MyJson {
         jason.goBaby();
     }
 
-//nasty path
     public void goBaby() {
-       // JSONInputStream jasonIn = new JSONInputStream();
-        System.out.println("I don't get JSON in java");
-
-        //testing git stuff
+//        ArrayList<PersonBean> beanString = controller.getAllPersons;
+//        try {
+//            String stringMyBean = JSONUtilities.stringify(beanString);
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
     }
 }
