@@ -69,6 +69,11 @@ public class FoodHashSet {
             System.out.println("You cannot have a negative initial capacity");
         }
 
+        // This tries to remove an element that does not exist in the set
+        mySet.remove("apples");
+
+        // This tries to remove a null value from the set
+        mySet.remove(null);
 
 
     }
