@@ -1,3 +1,5 @@
+package Shad;
+
 // the function we are going to test
 public class junk {
     public int  sum(int var1, int var2){
