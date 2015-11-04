@@ -1,10 +1,13 @@
-package mikecoleman.threads;
+package mikecoleman.threads.happyThreads;
 
 /**
  * Created by Mike on 10/10/2015.
  * This program lets us create Threads by implementing the Runnable interface
  */
+
+// Create a class that implements the Runnable interface
 class ImplementsRunner implements Runnable {
+
     // Override the default run() method and insert code you want your Thread to compute
     @Override
     public void run() {
