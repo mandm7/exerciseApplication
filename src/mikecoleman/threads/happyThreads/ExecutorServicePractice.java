@@ -1,4 +1,4 @@
-package mikecoleman.threads;
+package mikecoleman.threads.happyThreads;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -11,19 +11,20 @@ import java.util.concurrent.TimeUnit;
  * This is a good way to handle multithreading because you create a pool of threads to be used and reused as necessary.
  */
 
-class Processor implements Runnable {
-    // Create variable id for us to track a process task
+class Task implements Runnable {
+    // Create variable id for us to track a task
     private int id;
-    // Constructor of Processor that takes id as a parameter
-    public Processor(int id){
+    // Constructor of Task that takes id as a parameter
+    public Task(int id){
         this.id = id;
     }
 
     // Override the run() method with logic we want our Threads to run
     @Override
     public void run() {
-        System.out.println("Starting " + id);
+        System.out.println("Started " + id);
         try {
+            // Slow our thread down so we can see the results better in the console
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -32,21 +33,20 @@ class Processor implements Runnable {
     }
 }
 
-public class ExecutorThreadPractice {
+public class ExecutorServicePractice {
     public static void main(String[] args) {
         // Create a ThreadPool of 2 threads to be reused in our program
         ExecutorService executor = Executors.newFixedThreadPool(2);
-        // For loop for threads to work on 5 times taking parameter of our Processor run method
+        // For loop for threads to work on 5 times taking parameter of our Task run method
         for(int i = 0; i < 5; i++) {
-            executor.submit(new Processor(i));
+            executor.submit(new Task(i));
         }
         // Allows completion of submitted tasks by threads but rejects new tasks from being accepted
         executor.shutdown();
 
-        System.out.println("All tasks submitted");
         // Waits until all tasks have completed after shutdown request
         try {
-            executor.awaitTermination(1, TimeUnit.DAYS);
+            executor.awaitTermination(1, TimeUnit.MINUTES);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
