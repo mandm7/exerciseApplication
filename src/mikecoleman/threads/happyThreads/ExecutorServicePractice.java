@@ -2,7 +2,6 @@ package mikecoleman.threads.happyThreads;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Mike on 10/26/2015.
@@ -41,16 +40,5 @@ public class ExecutorServicePractice {
         for(int i = 0; i < 5; i++) {
             executor.submit(new Task(i));
         }
-        // Allows completion of submitted tasks by threads but rejects new tasks from being accepted
-        executor.shutdown();
-
-        // Waits until all tasks have completed after shutdown request
-        try {
-            executor.awaitTermination(1, TimeUnit.MINUTES);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        // Prints once all tasks are completed by threads
-        System.out.println("All tasks completed");
     }
 }

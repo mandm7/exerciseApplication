@@ -46,7 +46,7 @@ public class NastyCrossLock  {
                     synchronized (object2) {
                         System.out.println("Runner2 has lock on object2 and will sleep");
                         Thread.sleep(100);
-                        System.out.println("Runner2 is awake and will acquire to acquire lock for object1");
+                        System.out.println("Runner2 is awake and will attempt to acquire lock for object1");
                         // Attempts to gain lock on object1
                         synchronized (object1) {
                             Thread.sleep(100);
