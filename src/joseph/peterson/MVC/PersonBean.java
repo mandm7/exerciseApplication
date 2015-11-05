@@ -12,7 +12,7 @@ public class PersonBean implements Serializable {
     private int age;
     private int height;
     private int weight;
-    //constructor makes it easier to create instances.
+    //This is the object
     public PersonBean(String name, String email, int age, int height, int weight) {
         this.name = name;
         this.email = email;
@@ -21,6 +21,7 @@ public class PersonBean implements Serializable {
         this.weight = weight;
 
     }
+    //constructor makes it easier to create instances.
     //default constructor. We don't need defaults for person since every person is different.
     public PersonBean(){
     }
