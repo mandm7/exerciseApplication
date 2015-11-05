@@ -5,5 +5,3 @@ package joseph.peterson.mythreads;
  */
 public class ExecutorThreads {
 }
-
-// what????
