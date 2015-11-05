@@ -1,6 +1,6 @@
 package org.quickconnectfamily.json;
 /**
- * ParseException explains why and where the error occurs in source JSON text.
+ * ParseException explains why and where the error occurs in source mynewjson text.
  * 
  * @author FangYidong<fangyidong@yahoo.com.cn>
  *
@@ -56,7 +56,7 @@ public class ParseException extends Exception {
          * 
          * @return One of the following base on the value of errorType:
          *                      ERROR_UNEXPECTED_CHAR           java.lang.Character
-         *                      ERROR_UNEXPECTED_TOKEN          org.JSON.simple.parser.Yytoken
+         *                      ERROR_UNEXPECTED_TOKEN          org.mynewjson.simple.parser.Yytoken
          *                      ERROR_UNEXPECTED_EXCEPTION      java.lang.Exception
          */
         public Object getUnexpectedObject() {

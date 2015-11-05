@@ -1,6 +1,6 @@
 package Shad;
 
-import joseph.peterson.MVC.PersonBean;
+import joseph.peterson.mymvc.PersonBean;
 import org.quickconnectfamily.json.JSONException;
 import org.quickconnectfamily.json.JSONInputStream;
 import org.quickconnectfamily.json.JSONOutputStream;
@@ -17,10 +17,10 @@ import java.io.FileInputStream;
  * Created by Shad on 10/14/2015.
  */
 
-// ------------------------------WORKING EXAMPLES OF JSON --------------------------------------
+// ------------------------------WORKING EXAMPLES OF mynewjson --------------------------------------
 public class JSONSandbox implements Serializable{
  public static void main(String[] args) throws JSONException {
-// extracts PersonBean and adds the JSON parameters
+// extracts PersonBean and adds the mynewjson parameters
      PersonBean newBean = new PersonBean("Shad", "sbstanger@gmail.com", 28, 6, 175);
      try {
          String jsonString = JSONUtilities.stringify(newBean);
@@ -28,7 +28,7 @@ public class JSONSandbox implements Serializable{
      } catch (JSONException e) {
          e.printStackTrace();
      }
-     // extracts TestBean and adds the JSON parameters, has null value to show the null ability.
+     // extracts TestBean and adds the mynewjson parameters, has null value to show the null ability.
      TestBean newerBean = new TestBean("Shad", "Stanger", 8, 10, 1988);
      try {
          String jsonString = JSONUtilities.stringify(newerBean);

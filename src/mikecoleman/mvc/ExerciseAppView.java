@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Mike on 10/15/2015.
- * This class will serve the purpose of a View in the MVC pattern.
+ * This class will serve the purpose of a View in the mymvc pattern.
  * It will communicate with the controller to display information found in the model
  */
 

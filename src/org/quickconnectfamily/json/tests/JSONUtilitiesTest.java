@@ -366,7 +366,7 @@ public class JSONUtilitiesTest {
 	
 	public static void testParseString() {
 		try{
-			//test the happy path with a well formed JSON string.
+			//test the happy path with a well formed mynewjson string.
 			HashMap testMap = (HashMap)JSONUtilities.parse("{\"aNumber\":16.5,\"stringOne\":\"Some sort of string\",\"20\":\"some other stuff\",\"aTester\":{\"stringAtt\":\"hello\",\"doubleAtt\":-4.5,\"doubleObjAtt\":1000.567789,\"listAtt\":[7,\"hello there from list\"],\"parentString\":\"In The Parent\"}}");
 			Assert( testMap != null);
 			
@@ -430,7 +430,7 @@ public class JSONUtilitiesTest {
 		}
 		
 		/*
-		 * Testing malformed JSON object.
+		 * Testing malformed mynewjson object.
 		 */
 		try {
 			Object someObject = JSONUtilities.parse("{\"key\": \"anotherKey\":\"a value\"}");
@@ -438,7 +438,7 @@ public class JSONUtilitiesTest {
 		} catch (Exception e) {}
 		
 		/*
-		 * Testing malformed JSON array.
+		 * Testing malformed mynewjson array.
 		 */
 		try {
 			Object someObject = JSONUtilities.parse("[90, some stuff, \"other stuff\"]");
@@ -451,7 +451,7 @@ public class JSONUtilitiesTest {
 	
 	public static void testParseStringEncoding() {
 		try{
-			//test the happy path with a well formed JSON string.
+			//test the happy path with a well formed mynewjson string.
 			/*
 			 * UNICODE
 			 */
@@ -503,7 +503,7 @@ public class JSONUtilitiesTest {
             /*
              * UTF-8
              */
-            //test the happy path with a well formed JSON string.
+            //test the happy path with a well formed mynewjson string.
             testMap = (HashMap)JSONUtilities.parse("{\"aNumber\":16.5,\"stringOne\":\"Some sort of string\",\"20\":\"some other stuff\",\"aTester\":{\"stringAtt\":\"hello\",\"doubleAtt\":-4.5,\"doubleObjAtt\":1000.567789,\"listAtt\":[7,\"hello there from list\"],\"parentString\":\"In The Parent\"}}",JSONUtilities.encoding.UTF8);
             Assert( testMap != null);
             
@@ -580,7 +580,7 @@ public class JSONUtilitiesTest {
 		}
 		
 		/*
-		 * Testing malformed JSON object.
+		 * Testing malformed mynewjson object.
 		 */
 		try {
 			/*
@@ -601,7 +601,7 @@ public class JSONUtilitiesTest {
 		}
 		
 		/*
-		 * Testing malformed JSON array.
+		 * Testing malformed mynewjson array.
 		 */
 		try {
 			/*

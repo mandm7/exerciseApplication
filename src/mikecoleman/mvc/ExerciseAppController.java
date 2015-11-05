@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  * Created by Mike on 10/15/2015.
- * This class serves the purpose of Controller in the MVC pattern. This controller contains the following:
+ * This class serves the purpose of Controller in the mymvc pattern. This controller contains the following:
  * The start() method from main to being program execution
  * Scanner to get information from the user
  * Method to store information into a MyPersonBean

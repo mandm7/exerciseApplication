@@ -38,19 +38,19 @@ import java.util.Set;
 import javax.crypto.Cipher;
 import javax.crypto.CipherOutputStream;
 /**
- * The JSONOutputStream class is used when you want to send an object as a JSON string to any type of OutputStream such
- * as a FileOutputStream or a SocketOutputStream.  If you want to generate a JSON string from an object
+ * The JSONOutputStream class is used when you want to send an object as a mynewjson string to any type of OutputStream such
+ * as a FileOutputStream or a SocketOutputStream.  If you want to generate a mynewjson string from an object
  *  directly use the JSONUtilities.stringify methods instead.
  *  <br/>
  *  <br/>
- *  Attributes inherited from parent classes are also included in the JSON string.
+ *  Attributes inherited from parent classes are also included in the mynewjson string.
  * <br/>
  * <br/>
  * <ul>
  *  <li><b>Example 1 Object:</b>  An ArrayList with three values: a String "1", a String "hello", and a HashMap 
  *  as the third value in the ArrayList.  This HashMap has two key/value pairs: "name"/"fred" and "age"/"23".</li>
  *  
- *  <li><b>Example 1 JSON result:</b> ["1", "hello", {"name":"fred","age":"23"}]</li>
+ *  <li><b>Example 1 mynewjson result:</b> ["1", "hello", {"name":"fred","age":"23"}]</li>
  *  </ul>
  * <br/>
  * <ul>
@@ -58,7 +58,7 @@ import javax.crypto.CipherOutputStream;
  *  "people"/ArrayList.  The ArrayList that is the value for the "people" key has two String values 
  *  "bob" and "sue".</li>
  *  
- * <li><b>Example 2 JSON result:</b> {"state":"Idaho", "city":"Rexburg", "people":["bob","sue"]}</li>
+ * <li><b>Example 2 mynewjson result:</b> {"state":"Idaho", "city":"Rexburg", "people":["bob","sue"]}</li>
  * </ul>
  *  <br/>
  *  <br/>
@@ -67,8 +67,8 @@ import javax.crypto.CipherOutputStream;
  *  <br/>
  *  <br/>
  *  <h2>Restrictions</h2>
- *  The Java object from which the JSON string is being generated can not be a raw Object.  I can be anything that inherits from Object.
- *  The Java object from which the JSON string is being generated can not inherit from java.awt.container.
+ *  The Java object from which the mynewjson string is being generated can not be a raw Object.  I can be anything that inherits from Object.
+ *  The Java object from which the mynewjson string is being generated can not inherit from java.awt.container.
  *  
  * 
  * @author Lee S. Barney
@@ -82,7 +82,7 @@ public class JSONOutputStream extends JSONStream{
 	
 	/**
 	 * 
-	 * @param aStream - the stream to which the JSON is to be written
+	 * @param aStream - the stream to which the mynewjson is to be written
 	 */
 	public JSONOutputStream(OutputStream aStream){
 		if(aStream == null){
@@ -103,7 +103,7 @@ public class JSONOutputStream extends JSONStream{
 	}
 	
 	/**
-	 * Writes a Serializable Object to the underlying stream as a JSON string
+	 * Writes a Serializable Object to the underlying stream as a mynewjson string
 	 * @param aSerializableObject - any Serializable object other than a raw Java Object and anything that inherits from java.awt.container
 	 * @throws JSONException
 	 */
@@ -183,7 +183,7 @@ public class JSONOutputStream extends JSONStream{
 					theWriter.write(",");
 				}
 				if(!(value instanceof Serializable)){
-					throw new JSONException("Unable to JSON non-serializable object ("+value+") of type "+value.getClass().toString()+".");
+					throw new JSONException("Unable to mynewjson non-serializable object ("+value+") of type "+value.getClass().toString()+".");
 				}
 				theWriter.write("\""+key.toString()+"\":");
 				writeObject(((Serializable)value), levelCount);
@@ -202,7 +202,7 @@ public class JSONOutputStream extends JSONStream{
 					value = "null";
 				}
 				if(!(value instanceof Serializable)){
-					throw new JSONException("Unable to JSON non-serializable object ("+value+") of type "+value.getClass().toString()+".");
+					throw new JSONException("Unable to mynewjson non-serializable object ("+value+") of type "+value.getClass().toString()+".");
 				}
 				writeObject(((Serializable)value), levelCount);
 				if(keyIt.hasNext()){

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Mike on 10/19/2015.
- * This class serves the purpose of a Model in the MVC pattern.
+ * This class serves the purpose of a Model in the mymvc pattern.
  * It will hold an arrayList of PersonBeans for all people created as well as a method to add the PersonBeans to the ArrayList
  */
 

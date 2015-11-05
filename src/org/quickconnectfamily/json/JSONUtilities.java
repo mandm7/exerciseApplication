@@ -32,8 +32,8 @@ import javax.crypto.Cipher;
 import javax.crypto.CipherInputStream;
 import javax.crypto.CipherOutputStream;
 /**
- * This class contains several utility methods for generating and parsing JSON strings.  
- * Care has been taken to make these match the JavaScript JSON API as much as possible.
+ * This class contains several utility methods for generating and parsing mynewjson strings.
+ * Care has been taken to make these match the JavaScript mynewjson API as much as possible.
  *   Since these methods are static you may use them without worry from within any thread 
  *   or in multiple threads.
  * @author Lee S. Barney
@@ -45,7 +45,7 @@ public class JSONUtilities {
 	public static int subversion = 5;
 	public static boolean isBeta = true;
 	/**
-	 * Encodings available for parsed and generated JSON Strings
+	 * Encodings available for parsed and generated mynewjson Strings
 	 * @author Lee S. Barney
 	 *
 	 */
@@ -59,10 +59,10 @@ public class JSONUtilities {
 		return "V "+version+"."+subversion+" "+ (JSONUtilities.isBeta ? "beta": "release");
 	}
 	/**
-	 * Converts a Serializable object into a JSON formatted string
+	 * Converts a Serializable object into a mynewjson formatted string
 	 * @param aSerializableObject - the object to be JSONed.  This can be any Serializable Object except 
 	 * a raw Object or anything that inherits from java.awt.container.
-	 * @return a JSON formatted String or if null is passed in null is returned.
+	 * @return a mynewjson formatted String or if null is passed in null is returned.
 	 * @throws JSONException
 	 */
 	public static String stringify(Serializable aSerializableObject) throws JSONException{
@@ -77,7 +77,7 @@ public class JSONUtilities {
 	}
 	
 	/**
-	 * Converts a Serializable object into a JSON formatted string using the specified Encoding
+	 * Converts a Serializable object into a mynewjson formatted string using the specified Encoding
 	 * @param aSerializableObject - the object to be JSONed.  This can be any Serializable Object except 
 	 * a raw Object or anything that inherits from java.awt.container.
 	 * @param theEncoding - the encoding to use for the desired string.  It must be one 

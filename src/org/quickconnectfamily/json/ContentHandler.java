@@ -3,7 +3,7 @@ package org.quickconnectfamily.json;
 import java.io.IOException;
 
 /**
- * A simplified and stoppable SAX-like content handler for stream processing of JSON text. 
+ * A simplified and stoppable SAX-like content handler for stream processing of mynewjson text.
  * 
  * @see org.xml.sax.ContentHandler
  * @see org.json.simple.parser.JSONParser#parse(java.io.Reader, ContentHandler, boolean)
@@ -12,7 +12,7 @@ import java.io.IOException;
  */
 public interface ContentHandler {
         /**
-         * Receive notification of the beginning of JSON processing.
+         * Receive notification of the beginning of mynewjson processing.
          * The parser will invoke this method only once.
      * 
          * @throws ParseException - JSONParser will stop and throw the same exception to the caller when receiving this exception.
@@ -20,14 +20,14 @@ public interface ContentHandler {
         void startJSON() throws ParseException, IOException;
         
         /**
-         * Receive notification of the end of JSON processing.
+         * Receive notification of the end of mynewjson processing.
          * 
          * @throws ParseException
          */
         void endJSON() throws ParseException, IOException;
         
         /**
-         * Receive notification of the beginning of a JSON object.
+         * Receive notification of the beginning of a mynewjson object.
          * 
          * @return false if the handler wants to stop parsing after return.
          * @throws ParseException
@@ -37,7 +37,7 @@ public interface ContentHandler {
         boolean startObject() throws ParseException, IOException;
         
         /**
-         * Receive notification of the end of a JSON object.
+         * Receive notification of the end of a mynewjson object.
          * 
          * @return false if the handler wants to stop parsing after return.
          * @throws ParseException
@@ -47,9 +47,9 @@ public interface ContentHandler {
         boolean endObject() throws ParseException, IOException;
         
         /**
-         * Receive notification of the beginning of a JSON object entry.
+         * Receive notification of the beginning of a mynewjson object entry.
          * 
-         * @param key - Key of a JSON object entry. 
+         * @param key - Key of a mynewjson object entry.
          * 
          * @return false if the handler wants to stop parsing after return.
          * @throws ParseException
@@ -69,7 +69,7 @@ public interface ContentHandler {
         boolean endObjectEntry() throws ParseException, IOException;
         
         /**
-         * Receive notification of the beginning of a JSON array.
+         * Receive notification of the beginning of a mynewjson array.
          * 
          * @return false if the handler wants to stop parsing after return.
          * @throws ParseException
@@ -79,7 +79,7 @@ public interface ContentHandler {
         boolean startArray() throws ParseException, IOException;
         
         /**
-         * Receive notification of the end of a JSON array.
+         * Receive notification of the end of a mynewjson array.
          * 
          * @return false if the handler wants to stop parsing after return.
          * @throws ParseException
@@ -89,7 +89,7 @@ public interface ContentHandler {
         boolean endArray() throws ParseException, IOException;
         
         /**
-         * Receive notification of the JSON primitive values:
+         * Receive notification of the mynewjson primitive values:
          *      java.lang.String,
          *      java.lang.Number,
          *      java.lang.Boolean
