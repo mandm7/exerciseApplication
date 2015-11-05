@@ -1,4 +1,4 @@
-package joseph.peterson.MVC;
+package joseph.peterson.mymvc;
 
 import java.util.ArrayList;
 import java.util.Scanner;

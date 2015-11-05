@@ -1,4 +1,4 @@
-package joseph.peterson.COLLECTIONS;
+package joseph.peterson.collections;
 
 
 import java.util.ArrayList;

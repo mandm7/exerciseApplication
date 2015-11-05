@@ -8,7 +8,7 @@ package org.quickconnectfamily.json;
  * @author FangYidong<fangyidong@yahoo.com.cn>
  */
 public class Yytoken {
-        public static final int TYPE_VALUE=0;//JSON primitive value: string,number,boolean,null
+        public static final int TYPE_VALUE=0;//mynewjson primitive value: string,number,boolean,null
         public static final int TYPE_LEFT_BRACE=1;
         public static final int TYPE_RIGHT_BRACE=2;
         public static final int TYPE_LEFT_SQUARE=3;

@@ -34,7 +34,7 @@ import java.util.Map;
 
 
 /**
- * Parser for JSON text. Please note that JSONParser used independently is NOT thread-safe.  Use the JSONInputStream with the JSONStreamProtector and is is thread safe.
+ * Parser for mynewjson text. Please note that JSONParser used independently is NOT thread-safe.  Use the JSONInputStream with the JSONStreamProtector and is is thread safe.
  * 
  * @author FangYidong<fangyidong@yahoo.com.cn>. Greatly modified by Lee S. Barney
  */
@@ -122,13 +122,13 @@ public class JSONParser {
         }
         
         /**
-         * Parse JSON text into java object from the input source.
+         * Parse mynewjson text into java object from the input source.
          *      
          * @param in
-     * @param containerFactory - Use this factory to create your own JSON object and JSON array containers.
+     * @param containerFactory - Use this factory to create your own mynewjson object and mynewjson array containers.
          * @return Instance of the following:
-         *  org.JSON.simple.JSONObject,
-         *      org.JSON.simple.JSONArray,
+         *  org.mynewjson.simple.JSONObject,
+         *      org.mynewjson.simple.JSONArray,
          *      java.lang.String,
          *      java.lang.Number,
          *      java.lang.Boolean,

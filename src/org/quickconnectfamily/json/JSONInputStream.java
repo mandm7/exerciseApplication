@@ -30,30 +30,30 @@ import java.io.InputStreamReader;
 import javax.crypto.Cipher;
 import javax.crypto.CipherInputStream;
 /**
- * The JSONInputStream class is used when you want to read JSON from any type of InputStream such
- * as a FileInputStream or a SocketInputStream.  If you want to convert JSON string to the 
+ * The JSONInputStream class is used when you want to read mynewjson from any type of InputStream such
+ * as a FileInputStream or a SocketInputStream.  If you want to convert mynewjson string to the
  * appropriate Object and Array representations use the JSONUtilities.parse methods instead.
  * <br/>
  * <br/>
- * When your JSON is being parsed any JSON objects that it finds will be converted to HashMaps and
+ * When your mynewjson is being parsed any mynewjson objects that it finds will be converted to HashMaps and
  *  any arrays found will be converted to ArrayLists.  All keys and values in the HashMaps generated
  *   are Strings and all values in the ArrayLists generated are Strings.
  *  <br/>
  *  <ul>
- *  <li><b>Example 1 JSON:</b> ["1", "hello", {"name":"fred","age":"23"}]</li>
+ *  <li><b>Example 1 mynewjson:</b> ["1", "hello", {"name":"fred","age":"23"}]</li>
  *  <li><b>Example 1 Result:</b>  An ArrayList with three values: a String "1", a String "hello", and a HashMap 
  *  as the third value in the ArrayList.  This HashMap has two key/value pairs: "name"/"fred" and "age"/"23".</li>
  *  </ul>
  * <br/>
  * <ul>
- * <li><b>Example 2 JSON:</b> {"state":"Idaho", "city":"Rexburg", "people":["bob","sue"]}</li>
+ * <li><b>Example 2 mynewjson:</b> {"state":"Idaho", "city":"Rexburg", "people":["bob","sue"]}</li>
  * <li><b>Example 2 Result:</b> A HashMap with three key/value pairs: "state"/"Idaho", "city"/"Rexburg", and
  *  "people"/ArrayList.  The ArrayList that is the value for the "people" key has two String values 
  *  "bob" and "sue".</li>
  *  </ul>
  *  <br/>
  *  <br/>
- *  While these examples only show two levels of depth your JSON string can go to any depth level.  You
+ *  While these examples only show two levels of depth your mynewjson string can go to any depth level.  You
  *  can have any combination of arrays, objects, sub-arrays, and sub-objects.
  *  
  * 
@@ -66,7 +66,7 @@ public class JSONInputStream extends JSONStream{
 
 	/**
 	 * 
-	 * @param theByteStream - the stream from which the JSON is to be read.
+	 * @param theByteStream - the stream from which the mynewjson is to be read.
 	 */
 	public JSONInputStream(InputStream theByteStream) {
 		if(theByteStream == null){
@@ -79,8 +79,8 @@ public class JSONInputStream extends JSONStream{
 
 	/**
 	 * Reads a HashMap or ArrayList from the underlying stream
-	 * @return an Object of type HashMap if the JSON being read is an object or of type
-	 * ArrayList if the JSON being read is an array.
+	 * @return an Object of type HashMap if the mynewjson being read is an object or of type
+	 * ArrayList if the mynewjson being read is an array.
 	 * @throws JSONException
 	 */
 	public Object readObject() throws JSONException{
@@ -98,9 +98,9 @@ public class JSONInputStream extends JSONStream{
 			}
 			return parsedObject;
 		} catch (IOException e) {
-			throw new JSONException("unable to read JSON");
+			throw new JSONException("unable to read mynewjson");
 		} catch (ParseException e) {
-			throw new JSONException("Invalid JSON String");
+			throw new JSONException("Invalid mynewjson String");
 		}
 	}
 	/**
