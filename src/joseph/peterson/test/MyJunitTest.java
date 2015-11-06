@@ -1,12 +1,9 @@
 package joseph.peterson.test;
 
 
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
@@ -15,7 +12,7 @@ import static org.junit.Assert.*;
  * Created by Joseph on 11/2/2015.
  */
 public class MyJunitTest {
-
+//alt+enter over red will add what libraries you need to the classpath.
     @Test
     public void testAddPerson() {
         int sum = 3 + 3;
