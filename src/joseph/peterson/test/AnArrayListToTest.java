@@ -12,5 +12,7 @@ public class AnArrayListToTest {
         public void appendNumber(int aNumber){
             testArray.add(aNumber);
         }
-
+        public void divide(int one, int two){
+            int dividing = one/two;
+        }
 }

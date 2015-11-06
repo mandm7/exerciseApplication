@@ -1,12 +1,9 @@
 package joseph.peterson.test;
 
 
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
@@ -15,7 +12,7 @@ import static org.junit.Assert.*;
  * Created by Joseph on 11/2/2015.
  */
 public class MyJunitTest {
-
+//alt+enter over red will add what libraries you need to the classpath.
     @Test
     public void testAddPerson() {
         int sum = 3 + 3;
@@ -60,17 +57,18 @@ public class MyJunitTest {
     }
     //last thing to do for junit is test that an exception has been thrown.
 
-
-        @Rule
-        //what is final?
-        public final ExpectedException exception = ExpectedException.none();
-
         @Test
         public void myException() {
-            AnArrayListToTest letsTestThis = new AnArrayListToTest();
+            try {
+                AnArrayListToTest letsTestThis = new AnArrayListToTest();
+                letsTestThis.divide(4,0);
+                //its this fail method to test if exception has been thrown or not.
+                fail("Should have thrown exception");
+            }
+            catch (Exception e){
 
-            exception.expect(IndexOutOfBoundsException.class);
-            letsTestThis.appendNumber(2);
+            }
         }
+
     }
 
