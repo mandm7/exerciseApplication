@@ -60,17 +60,18 @@ public class MyJunitTest {
     }
     //last thing to do for junit is test that an exception has been thrown.
 
-
-        @Rule
-        //what is final?
-        public final ExpectedException exception = ExpectedException.none();
-
         @Test
         public void myException() {
-            AnArrayListToTest letsTestThis = new AnArrayListToTest();
+            try {
+                AnArrayListToTest letsTestThis = new AnArrayListToTest();
+                letsTestThis.divide(4,0);
+                //its this fail method to test if exception has been thrown or not.
+                fail("Should have thrown exception");
+            }
+            catch (Exception e){
 
-            exception.expect(IndexOutOfBoundsException.class);
-            letsTestThis.appendNumber(2);
+            }
         }
+
     }
 
