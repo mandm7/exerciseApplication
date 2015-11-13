@@ -3,9 +3,7 @@ package joseph.peterson.test;
 
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
@@ -48,9 +46,10 @@ public class MyJunitTest {
             //set variable to public.
             myField.setAccessible(true);
             //get what is in the attribute and test it.
-            ArrayList valuesList = (ArrayList)myField.get(ATest);
-            assertEquals(1, valuesList.get(0));
-
+            int aNumber = (Integer)myField.get(ATest);
+            assertEquals(1, aNumber);
+            //change what is in the attribute.
+            aNumber = 2;
         }catch (Exception e){
             e.printStackTrace();
         }
