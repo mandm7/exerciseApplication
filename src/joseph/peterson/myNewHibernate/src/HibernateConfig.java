@@ -1,3 +1,7 @@
+package joseph.peterson.myNewHibernate.src;
+
+import joseph.peterson.myNewHibernate.src.PhoneNumber;
+import joseph.peterson.myNewHibernate.src.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 

@@ -1,3 +1,6 @@
+package joseph.peterson.myNewHibernate.src;
+
+import joseph.peterson.myNewHibernate.src.User;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -177,7 +180,7 @@ public class HibernateRunner {
         transaction.commit();
         /*
           * at this point the records have been removed from the database but still exist in our class list attribute.
-          * Do not store lists retrieved from the database since they will be out of synch with the database table from which they come.
+          * Do not store lists retrieved from the database since they will be out of sync with the database table from which they come.
           * This example shows that you should not store retrieved lists.
           */
         System.out.println(users);

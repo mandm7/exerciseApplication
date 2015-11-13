@@ -1,3 +1,5 @@
+package joseph.peterson.myNewHibernate.src;
+
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
