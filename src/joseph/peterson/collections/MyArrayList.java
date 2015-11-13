@@ -13,7 +13,7 @@ public class MyArrayList {
     }
     public void run(){
         ////////////////////////////////////////////////HAPPY PATHS///////////////////////////////////////////
-        ArrayList<Integer> anArrayList = new ArrayList();
+        ArrayList<Integer> anArrayList = new ArrayList<>();
         anArrayList.add(1);
         anArrayList.add(2);
         anArrayList.add(3);
