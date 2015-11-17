@@ -49,7 +49,7 @@ public class MyJunitTest {
             myField.setAccessible(true);
             //get what is in the attribute and test it.
             ArrayList aNumber = (ArrayList)myField.get(ATest);
-            assertEquals(1, aNumber);
+            assertEquals(1, aNumber.get(0));
 
         }catch (Exception e){
             e.printStackTrace();
