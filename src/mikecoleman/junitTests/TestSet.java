@@ -5,7 +5,7 @@ import java.util.HashSet;
 /**
  * Created by Mike on 11/13/2015.
  * This is a class that has a private attribute exampleSet of type HashSet
- * Our Junit test will be to add and change an element within the private HashSet
+ * Our Junit test will be to add an element within the private HashSet
  */
 
 public class TestSet {
