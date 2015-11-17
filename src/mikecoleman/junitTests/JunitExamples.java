@@ -52,7 +52,7 @@ public class JunitExamples {
 
     // Used to create an ArrayList with a certain initial size, negative will throw exception, positive will cause test to fail
     public ArrayList<String> createArray(){
-        ArrayList<String> myArrayList = new ArrayList<>(2);
+        ArrayList<String> myArrayList = new ArrayList<>(-2);
         return myArrayList;
     }
 

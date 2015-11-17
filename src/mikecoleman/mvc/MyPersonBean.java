@@ -1,10 +1,12 @@
 package mikecoleman.mvc;
 
+import java.io.Serializable;
+
 /**
  * Created by Mike on 10/15/2015.
  * This class is just a JavaBean for users created within the application
  */
-public class MyPersonBean {
+public class MyPersonBean implements Serializable {
 
     private String name;
     private String email;
