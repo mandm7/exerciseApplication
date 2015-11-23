@@ -39,7 +39,7 @@ public class JsonPractice {
         }
 
         // Create file jsonFile1.json
-        File jsonFile1 = new File("jsonFile1.json");
+        File jsonFile1 = new File("C:\\Users\\Jacob Massey\\Documents\\Github\\jsonFile1.json");
         // Use json to write the info created in aPersonBean we created at the beginning of this class
         try {
             FileOutputStream someOutputStream = new FileOutputStream(jsonFile1);
@@ -50,7 +50,7 @@ public class JsonPractice {
         }
 
         // Create file jsonFile2.json
-        File jsonFile2 = new File("jsonFile2.json");
+        File jsonFile2 = new File("C:\\Users\\Jacob Massey\\Documents\\Github\\jsonFile2.json");
         try {
             FileInputStream someInputStream = new FileInputStream(jsonFile2);
             JSONInputStream someJsonInput = new JSONInputStream(someInputStream);
@@ -92,7 +92,7 @@ public class JsonPractice {
         }
 
         MyPersonBean anotherPerson = new MyPersonBean(null,"j.halpert@theoffice.com", 37, 190, 170);
-        File jsonFileWithNull = new File("jsonFileWithNull.json");
+        File jsonFileWithNull = new File("C:\\Users\\Jacob Massey\\Documents\\Github\\jsonFileWithNull.json");
         /* Use json to write the info created in anotherPerson just created,
            file reads with a blank (null) where the null parameter was placed*/
         try {
