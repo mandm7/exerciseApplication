@@ -104,7 +104,7 @@ public class JsonPractice {
         }
 
         // Create new file to which access will be denied
-        File jsonRevokedPrivileges = new File("jsonRevokedPrivileges.json");
+        File jsonRevokedPrivileges = new File("C:\\Users\\Jacob Massey\\Documents\\Github\\jsonRevokedPrivileges.json");
         try {
             /* Attempt to write to a file that we do not have rights to, throws
                java.io.FileNotFoundException: jsonRevokedPrivileges.json exception */
@@ -124,14 +124,14 @@ public class JsonPractice {
             e.printStackTrace();
         }
 
-        // Write null to a file that already exists, file is overwritten as a blank file
-        try {
-            FileOutputStream moreOutputStream = new FileOutputStream(jsonFile1);
-            JSONOutputStream moreJsonOutput = new JSONOutputStream(moreOutputStream);
-            moreJsonOutput.writeObject(null);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        // Write null to a file that already exists, file is overwritten as a blank file
+//        try {
+//            FileOutputStream moreOutputStream = new FileOutputStream(jsonFile1);
+//            JSONOutputStream moreJsonOutput = new JSONOutputStream(moreOutputStream);
+//            moreJsonOutput.writeObject(null);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
 
     }
